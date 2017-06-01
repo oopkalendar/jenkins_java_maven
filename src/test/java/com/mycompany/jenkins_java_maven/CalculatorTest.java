@@ -33,7 +33,7 @@ public class CalculatorTest {
      */
     @org.junit.Test
     public void testSumPositive() {
-        System.out.println("sum");
+        System.out.println("sum positive arguments");
         int a = 1;
         int b = 2;
         Calculator instance = new Calculator();
@@ -44,7 +44,7 @@ public class CalculatorTest {
 
     @org.junit.Test
     public void testSumZero() {
-        System.out.println("sum");
+        System.out.println("sum zero arguments");
         int a = 0;
         int b = 0;
         Calculator instance = new Calculator();
@@ -52,4 +52,16 @@ public class CalculatorTest {
         int result = instance.sum(a, b);
         assertEquals(expResult, result);
     }
+    
+    @org.junit.Test
+    public void testSub() {
+        System.out.println("subtract with positive arguments where the first argument is bigger than the second");
+        int a = 10;
+        int b = 2;
+        Calculator instance = new Calculator();
+        int expResult = 8;
+        int result = instance.subtract(a, b);
+        assertEquals(expResult, result);
+    }
+
 }
